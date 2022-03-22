@@ -72,7 +72,7 @@ section .content a{
     font-size: 20px 0 10px;
 }
 
-.generalMenu{
+.menuToggle{
     position: fixed;
     top: 0;
     right: 0;
@@ -86,10 +86,18 @@ section .content a{
     z-index: 1000;
 }
 
+.menuToggle.active{
+    background: #f60f20 url(close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+}
+
 .navigation{
     position: fixed;
     top:0;
-    left: 0;
+/* left: calc(100% - 60px) se refere ao total da tela menos os 60px da .socialBarS*/
+    left: calc(100% - 60px);
     width: 100%;
     height: 100%;
     background: #fff;
@@ -98,4 +106,62 @@ section .content a{
     justify-content: center;
     align-items: center;
     transition: 0.2s;
+}
+
+.navigation.active{
+    left: 0px;
+}
+
+.navigation ul{
+    position: relative;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    font-size: 2.5em;
+    color: #111;
+    font-weight: 300;
+}
+
+.navigation ul li a:hover{
+    color: #f60f20;
+}
+
+.socialBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialBar ul{
+    position: relative;
+}
+
+.socialBar ul li{
+    position: relative;
+    list-style: none;
+}
+
+.socialBar ul li a{
+    position: relative;
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+.socialBar .emailBx{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.6);
 }
