@@ -52,6 +52,7 @@ section .content p{
     color: #fff;
     font-size: 1.1em;
     margin: 20px 0 10px;
+    width: 600px;
 }
 
 section .content a{
@@ -105,7 +106,7 @@ section .content a{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
+    transition: 0.9s;
 }
 
 .navigation.active{
